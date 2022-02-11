@@ -1,0 +1,26 @@
+function findOutlier(integers){
+    let  evens = []
+    let odds = []
+
+    for(let i = 0; i < integers.length; i++){
+        
+        if((integers[i] % 2)== 0){
+            
+            evens.push(integers[i])
+        }
+        else{
+            odds.push(integers[i])
+        }
+    }
+    let eLen = evens.length;
+    let oLen = odds.length;
+
+    if(eLen > oLen){
+        return odds[0]
+    }else{
+        return evens[0]
+    }
+}
+
+findOutlier([2,4,11])
+// findOutlier([160,3,1719])
